@@ -9,7 +9,7 @@ import listaCircular.exceptions.itemNotFoundException;
 
 /**
  *
- * @author elio
+ * @author Elio Rincón
  */
 public class EList<T> 
 {
