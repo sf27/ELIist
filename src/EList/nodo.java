@@ -6,7 +6,7 @@ package EList;
 
 /**
  *
- * @author elio
+ * @author Elio Rincón
  */
 public class nodo<T> 
 {
