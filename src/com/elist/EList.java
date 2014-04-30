@@ -19,7 +19,7 @@ public class EList<T> {
     /**
      * Metodo que ingresa datos al principio de la lista
      * 
-     * @param datoR
+     * @param T datoR
      * @return lista<T>
      */
     public EList<T> addFirst(T datoR) {
@@ -47,7 +47,7 @@ public class EList<T> {
     /**
      * Metodo que ingresa datos al final de la lista
      * 
-     * @param datoR
+     * @param T datoR
      * @return lista<T>
      */
     public EList<T> addLast(T datoR) {
@@ -74,9 +74,9 @@ public class EList<T> {
      * indicado Retorna true si se realizo correctamente el proceso, false en
      * caso contrario
      * 
-     * @param index
-     * @param element
-     * @return
+     * @param int index
+     * @param T element
+     * @return boolean
      */
     public boolean set(int index, T element) {
         boolean aux = false;
@@ -130,7 +130,7 @@ public class EList<T> {
      * llamada itemNotFoundException Retorna true si se realizo correctamente el
      * proceso, false en caso contrario
      * 
-     * @param index
+     * @param int index
      * @return boolean
      */
     public boolean remove(int index) {
@@ -162,7 +162,6 @@ public class EList<T> {
                         else {
                             // se enlazan el nodo siguiente con el anterior al
                             // nodo que se va a eliminar
-
                             nodoAnterior.setEnlace(nodoR.getEnlace());
                             auxA = true;
                             break;
@@ -200,7 +199,7 @@ public class EList<T> {
      * en ella. Sino arroja una exception llamada itemNotFoundException Retorna
      * true si se realizo correctamente el proceso, false en caso contrario
      * 
-     * @param datoR
+     * @param T datoR
      * @return boolean
      */
     public boolean remove(T datoR) {
@@ -269,7 +268,7 @@ public class EList<T> {
     /**
      * Metodo que retorna el dato de la posicion recibida
      * 
-     * @param index
+     * @param int index
      * @return T
      */
     public T get(int index) {
@@ -294,7 +293,8 @@ public class EList<T> {
     /**
      * Metodo que indica la posicion en la cual esta el dato recibido
      * 
-     * @param dataRecibida
+     * @param T
+     *            dataRecibida
      * @return int
      */
     public int indexOf(T dataRecibida) {
@@ -319,7 +319,8 @@ public class EList<T> {
      * Metodo que copia los datos de la lista a un arreglo recibido como
      * argumento
      * 
-     * @param data
+     * @param T
+     *            [] data
      * @return T[]
      */
     public T[] toArray(T[] data) {
@@ -361,6 +362,11 @@ public class EList<T> {
         }// else
     }// toArray
 
+    /**
+     * Retorna el tamaño de la lista
+     * 
+     * @return int
+     */
     public int size() {
         if (isEmpty()) {
             return 0;
@@ -379,8 +385,9 @@ public class EList<T> {
     /**
      * Metodo que recibe un argumento y indica si este dato esta en lista o no.
      * 
-     * @param element
-     * @return
+     * @param T
+     *            element
+     * @return boolean
      */
     public boolean contains(T element) {
         boolean auxA = false, auxB = false;

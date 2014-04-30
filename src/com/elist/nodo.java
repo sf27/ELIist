@@ -12,8 +12,6 @@ public class nodo<T> {
     private T       data;
     private nodo<T> enlace;
 
-    // int dato = 0;
-    // nodo1 enlace;
     public nodo(T dataRec) {
         this.data = dataRec;
         enlace = null;
